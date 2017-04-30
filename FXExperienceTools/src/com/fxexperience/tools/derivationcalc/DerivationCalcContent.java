@@ -1,6 +1,8 @@
 package com.fxexperience.tools.derivationcalc;
 
 import com.fxexperience.javafx.scene.control.colorpicker.ColorPicker;
+import com.fxexperience.tools.main.ControlledScreen;
+import com.fxexperience.tools.main.ScreenController;
 import com.sun.javafx.util.Utils;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -20,8 +22,9 @@ import javafx.scene.paint.Color;
 /**
  * @author Jasper Potts
  */
-public class DerivationCalcContent implements Initializable {
-    
+public class DerivationCalcContent implements Initializable, ControlledScreen {
+   
+    private ScreenController screenController;
     @FXML private AnchorPane anchorPane;
     @FXML private GridPane gridPane;
     @FXML private Label forwardDerivationLabel;
@@ -144,6 +147,9 @@ public class DerivationCalcContent implements Initializable {
         final int blue = (int)(color.getBlue()*255);
         return String.format("#%02X%02X%02X", red,green,blue);
     }
-    
-    
+
+    @Override
+    public void setScreenParent(ScreenController screenParent) {
+        this.screenController = screenParent;
+    }
 }

@@ -29,27 +29,39 @@ and open the template in the editor.
 .choice-box-font {
     -fx-background-color:  rgb(74,74, 74); 
 }
-
+.properties-pane {
+    -fx-background-color: #4E4E4E;
+}
 .slider-prop .track{
-    -fx-background-color: rgb(144,144, 144); 
+    -fx-background-color: #898989; 
 }
 .slider-prop .thumb{
-    -fx-background-color: rgb(166,166, 166); 
+    -fx-background-color: #65eEF1;  
 }
 #Gridpane-advanced, #PropertiesPanel {
     -fx-background-color:  #545454;  
 
 }
-#Simple, #Advanced {
-    -fx-background-color: rgb(144,144, 144); 
-}
+
 .title {
-     -fx-font-size: 16pt;
-    -fx-text-fill: #e3e3e3;
+    -fx-font-family: "Sans-Serif";
+     -fx-font-size: 14pt;
+    -fx-text-fill: #FFFFFF;
     -fx-font-weight: bold;
     
 }
-.tab:selected:top .tab-container .tab-label {
+.properties-tab {
+     -fx-background-color: #666666;
+}
+.properties-tab .tab-container .tab-label {
+    -fx-text-fill: #AAA;
+}
+.properties-tab:selected:top {
+    
+    -fx-background-color: #888888;
+   
+}
+.properties-tab:selected:top .tab-container .tab-label {
     -fx-text-fill: #FFFFFF;
     -fx-font-weight: bold;
      -fx-font-size: 12pt;
@@ -67,7 +79,7 @@ and open the template in the editor.
 }
 
 #GridPane-Properties {
-    -fx-background-color: #545454;  
+    -fx-background-color: #4E4E4E;  
 }
 
 #input-text-field {
@@ -139,7 +151,6 @@ and open the template in the editor.
     -fx-opacity: -fx-disabled-opacity;
 }
 
-
 .webcolor-field {
     -fx-skin: "com.fxexperience.javafx.scene.control.skin.WebColorFieldSkin";
     -fx-background-color:  rgb(74,74, 74); 
@@ -159,3 +170,28 @@ and open the template in the editor.
 .webcolor-field:disabled {
     -fx-opacity: -fx-disabled-opacity;
 }
+
+#gradientComboBox .list-cell {
+    -fx-text-fill: #DCDCDC;
+   -fx-padding: 0 0 0 7;
+   -fx-background-insets: -1;
+    -fx-cell-size: 15;
+}
+
+.properties-combo-box .arrow-button {
+    -fx-background-color: #494949;
+     -fx-background-insets: -1;
+}
+.font-choice-box .context-menu {
+     -fx-text-fill:  #DCDCDC;
+      -fx-background-color: rgb(74,74, 74); 
+}
+.font-choice-box .label {
+     -fx-text-fill:  #DCDCDC;
+}
+
+.font-choice-box{
+    -fx-text-fill:  #DCDCDC;
+    -fx-background-color: rgb(74,74, 74); 
+}
+

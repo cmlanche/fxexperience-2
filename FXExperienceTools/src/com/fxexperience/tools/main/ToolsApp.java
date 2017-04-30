@@ -1,6 +1,6 @@
-package com.fxexperience.tools;
+package com.fxexperience.tools.main;
 
-import com.fxexperience.tools.caspianstyler.CaspianStylerMainFrame;
+import com.fxexperience.tools.styler.mainpanel.StylerMainController;
 import com.fxexperience.tools.derivationcalc.DerivationCalcContent;
 import com.fxexperience.tools.splineeditor.SplineEditor;
 import java.io.IOException;
@@ -46,7 +46,6 @@ public class ToolsApp extends Application {
     private static final Interpolator INTERPOLATOR = Interpolator.SPLINE(0.4829, 0.5709, 0.6803, 0.9928);
     private static final double TOOLBAR_WIDTH = 80;
     private Pane root;
-    private Parent caspianStyler;
     private StackPane currentPane, sparePane;
     private VBox toolBar;
     private int currentToolIndex = 0;
@@ -63,27 +62,30 @@ public class ToolsApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
+
         tools = new Tool[]{
             new Tool(
             "Caspian Styler",
-            (Parent) FXMLLoader.load(CaspianStylerMainFrame.class.getResource("CaspianStylerMainFrame.fxml")),
-            new Image(ToolsApp.class.getResourceAsStream("images/caspianstyler-icon.png"))
+            (Parent) FXMLLoader.load(StylerMainController.class.getResource("FXMLStylerMain.fxml")),
+            new Image(ToolsApp.class.getResourceAsStream("/images/caspianstyler-icon.png"))
+               
             ),
             new Tool(
             "Animation Spline Editor",
             new SplineEditor(),
-            new Image(ToolsApp.class.getResourceAsStream("images/spline-editor-icon.png"))
+            new Image(ToolsApp.class.getResourceAsStream("/images/spline-editor-icon.png"))
             ),
             new Tool(
             "Derived Color Calculator",
             (Parent) FXMLLoader.load(DerivationCalcContent.class.getResource("DerivationCalcContent.fxml")),
-            new Image(ToolsApp.class.getResourceAsStream("images/derive-color-icon.png"))
+            new Image(ToolsApp.class.getResourceAsStream("/images/derive-color-icon.png"))
             )
         };
 
         //create root node
-        root = new Pane() {
-            @Override
+       root = new Pane() {
+            
+           @Override
             protected void layoutChildren() {
                 double w = getWidth();
                 double h = getHeight();
@@ -174,7 +176,7 @@ public class ToolsApp extends Application {
         return toolBarBackground;
     }
 
-    public void switchTool(Tool newTool, final int toolIndex) {
+    private void switchTool(Tool newTool, final int toolIndex) {
         // check if existing animation running
         if (timeline != null) {
             nextTool = newTool;

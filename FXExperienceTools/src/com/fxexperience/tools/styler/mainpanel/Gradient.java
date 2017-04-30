@@ -1,4 +1,4 @@
-package com.fxexperience.tools.caspianstyler;
+package com.fxexperience.tools.styler.mainpanel;
 
 /**
  * Gradient Descriptor
@@ -18,10 +18,10 @@ public class Gradient {
         this.name = name;
         this.topDerivation = topDerivation;
         this.bottomDerivation = bottomDerivation;
-        topMidDerivation = Double.NaN;
-        bottomMidDerivation = Double.NaN;
-        shinny = false;
-        css = "linear-gradient( to bottom, derive(-fx-color, "+topDerivation+"%) 0%, derive(-fx-color, "+bottomDerivation+"%) 100%);";
+        this.topMidDerivation = Double.NaN;
+        this.bottomMidDerivation = Double.NaN;
+        this.shinny = false;
+        this.css = "linear-gradient( to bottom, derive(-fx-color, "+topDerivation+"%) 0%, derive(-fx-color, "+bottomDerivation+"%) 100%);";
     }
 
     public Gradient(String name, double topDerivation, double topMidDerivation, double bottomMidDerivation, double bottomDerivation) {
@@ -30,8 +30,8 @@ public class Gradient {
         this.topMidDerivation = topMidDerivation;
         this.bottomMidDerivation = bottomMidDerivation;
         this.bottomDerivation = bottomDerivation;
-        shinny = true;
-        css = "linear-gradient( to bottom, "
+        this.shinny = true;
+        this.css = "linear-gradient( to bottom, "
                 + "derive(-fx-color, "+topDerivation+"%) 0%, "
                 + "derive(-fx-color, "+topMidDerivation+"%) 50%, "
                 + "derive(-fx-color, "+bottomMidDerivation+"%) 50.5%, "

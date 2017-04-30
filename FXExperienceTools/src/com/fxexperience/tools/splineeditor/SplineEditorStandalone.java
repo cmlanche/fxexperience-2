@@ -1,6 +1,6 @@
 package com.fxexperience.tools.splineeditor;
 
-import com.fxexperience.tools.Tool;
+import com.fxexperience.tools.main.Tool;
 import java.io.IOException;
 import javafx.application.Application;
 import javafx.scene.Scene;

@@ -1,6 +1,6 @@
 package com.fxexperience.tools.splineeditor;
 
-import com.fxexperience.tools.AnimatedPanel;
+import com.fxexperience.tools.main.AnimatedPanel;
 import java.util.Collections;
 import javafx.animation.*;
 import javafx.beans.binding.StringBinding;

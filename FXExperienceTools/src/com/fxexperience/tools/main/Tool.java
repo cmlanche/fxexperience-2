@@ -1,4 +1,4 @@
-package com.fxexperience.tools;
+package com.fxexperience.tools.main;
 
 import javafx.scene.Parent;
 import javafx.scene.image.Image;

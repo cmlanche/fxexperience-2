@@ -1,5 +1,5 @@
 #ContentArea {
-    -fx-background-image: url("images/background.png");
+    -fx-background-image: url("/images/background.png");
     -fx-background: black;
     -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.4) , 80, 0.0 , 0 , 0 );
 }
@@ -75,22 +75,22 @@
 .switch .box{
     -fx-background-color: transparent;
     -fx-padding: 16 53 0 0;
-    -fx-background-image: url("images/off.png");
+    -fx-background-image: url("/images/off.png");
 }
 .switch:selected .box {
     -fx-background-color: transparent;
-    -fx-background-image: url("images/on.png");
+    -fx-background-image: url("/images/on.png");
 }
 .switch:focused .box{
     -fx-background-color: -fx-focus-color;
     -fx-padding: 16 53 0 0;
-    -fx-background-image: url("images/off.png");   
+    -fx-background-image: url("/images/off.png");   
     -fx-background-insets: -1.4;
     -fx-background-radius: 3;
 }
 .switch:focused:selected .box {
     -fx-background-color: -fx-focus-color;
-    -fx-background-image: url("images/on.png");    
+    -fx-background-image: url("/images/on.png");    
     -fx-background-insets: -1.4;
     -fx-background-radius: 4;
 }

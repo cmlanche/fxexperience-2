@@ -3,7 +3,6 @@ package com.fxexperience.tools.splineeditor;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.collections.FXCollections;
-import javafx.event.EventHandler;
 import javafx.scene.Cursor;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
