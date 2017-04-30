@@ -17,4 +17,5 @@ What's Included?
 	- Demonstrates the sample code in FXExperience-controls.
 			
 For more info about this app and other JavaFX features please
-visit: http://fxexperience.com/2012/03/announcing-fx-experience-tools/
+visit:
+http://fxexperience.com/2012/03/announcing-fx-experience-tools/
